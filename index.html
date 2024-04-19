@@ -4,27 +4,32 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ProjectSurvival4All TH - Köln</title>
+    <link rel="stylesheet" href="./assets/styles/reset.css" />
+    <link rel="stylesheet" href="./assets/styles/fonts.css" />
+    <link rel="stylesheet" href="./assets/styles/icons.css" />
+    <link rel="stylesheet" href="./assets/styles/variables.css" />
+    <link rel="stylesheet" href="./assets/styles/base.css" />
+    <link rel="stylesheet" href="./assets/styles/styles.css" />
+    <link rel="stylesheet" href="./assets/styles/components.css" />
   </head>
 
   <body>
     <!-- header -->
     <header>
       <nav>
-        <h1>
-          <a href="./index.html"
-            ><img
-              src="./images/th_koeln_svg.svg"
-              alt="ProjectSurvival4All TH - Köln"
-          /></a>
-        </h1>
-        <a href="./pages/about/about-the-project.html">Über das Projekt</a>
+        <a class="logo" href="./index.html"
+          ><h1>
+            ProjectSurvival4All <br />
+            - TH Köln
+          </h1></a
+        >
       </nav>
     </header>
 
     <!-- main -->
     <main>
       <!-- Welcome Banner -->
-      <section>
+      <section class="hero">
         <h2>Willkommen</h2>
         <p>
           In der Bearbeitung von Projekten ist es von entscheidender Bedeutung,
@@ -40,40 +45,55 @@
           ProjectSurvival4All deine Projekterfahrung auf das nächste Level heben
           kann.
         </p>
+        <a href="./about/about-the-project.html">Über das Projekt</a>
       </section>
-
       <!-- Favoriten -->
-      <section>
+      <section class="favourites">
         <h2>Favoriten</h2>
         <ul>
-          <li>
-            <a href="#">
-              <h3>Wie baue ich eine Präsentation auf?</h3>
-              <p>Monika Engelen</p>
+          <li class="has-icon">
+            <a href="#" class="wrapper">
+              <span class="icon icon--xl"> description </span>
+              <div class="container">
+                <h3>Wie baue ich eine Präsentation auf?</h3>
+                <address>Monika Engelen</address>
+              </div>
             </a>
           </li>
           <li>
-            <a href="#">
-              <h3>Wie erstelle ich eine Agenda?</h3>
-              <p>Rapahele Groten</p>
+            <a href="#" class="wrapper">
+              <span class="icon icon--xl"> description </span>
+              <div class="container">
+                <h3>Wie erstelle ich eine Agenda?</h3>
+                <address>Rapahele Groten</address>
+              </div>
             </a>
           </li>
           <li>
-            <a href="#">
-              <h3>Wie priorisiere ich (ein Backlog)?</h3>
-              <p>Rapahele Groten</p>
+            <a href="#" class="wrapper">
+              <span class="icon icon--xl"> description </span>
+              <div class="container">
+                <h3>Wie priorisiere ich (ein Backlog)?</h3>
+                <address>Rapahele Groten</address>
+              </div>
             </a>
           </li>
           <li>
-            <a href="#">
-              <h3>Wie halte ich einen Pitch?</h3>
-              <p>Monika Engelen</p>
+            <a href="#" class="wrapper">
+              <span class="icon icon--xl"> description </span>
+              <div class="container">
+                <h3>Wie halte ich einen Pitch?</h3>
+                <address>Monika Engelen</address>
+              </div>
             </a>
           </li>
           <li>
-            <a href="#">
-              <h3>Wie baue ich eine Präsentation auf?</h3>
-              <p>Monika Engelen</p>
+            <a href="#" class="wrapper">
+              <span class="icon icon--xl"> description </span>
+              <div class="container">
+                <h3>Wie baue ich eine Präsentation auf?</h3>
+                <address>Monika Engelen</address>
+              </div>
             </a>
           </li>
         </ul>
@@ -100,13 +120,14 @@
           <li>
             <a href="#">
               <article class="ui card">
-                <img
-                  src="./images/rednerin-praesentation.jpg"
-                  alt="Rednerin bei einer Präsentation"
-                  class="ui image"
-                  width="512"
-                />
-                <div class="content">
+                <figure>
+                  <img
+                    src="./assets/images/rednerin-praesentation.jpg"
+                    alt="Rednerin bei einer Präsentation"
+                    class="ui image"
+                  />
+                </figure>
+                <figcaption>
                   <h2 class="">Wie halte ich einen Pitch</h2>
                   <time class="date">2024-02-02</time>
                   <p>
@@ -115,20 +136,15 @@
                     Strukturierung des Inhalts, Präsentationstechniken und der
                     Beantwortung von Fragen.
                   </p>
-                </div>
-                <div class="extra content">
-                  <span class="right floated">Autor: Monika Engelen</span>
-                  <span
-                    >Projektphase: Projektidee, Projektstart,
-                    Projektabschluss</span
-                  >
-                </div>
-                <div class="extra content">
+                  <address class="right floated">Autor: Monika Engelen</address>
+                  <p>
+                    Projektphase: Projektidee, Projektstart, Projektabschluss
+                  </p>
                   <span
                     >Tags: Pitch, Startup, Überzeugen, Visualisieren,
                     Vortrag</span
                   >
-                </div>
+                </figcaption>
               </article>
             </a>
           </li>
@@ -136,10 +152,9 @@
             <a href="#">
               <article class="ui card">
                 <img
-                  src="./images/pitch-strukturieren.jpg"
+                  src="./assets/images/pitch-strukturieren.jpg"
                   alt="Strukturierte Darstellung eines Pitches"
                   class="ui image"
-                  width="512"
                 />
                 <div class="content">
                   <h2 class="">Wie Strukturiere ich einen Pitch?</h2>
@@ -152,8 +167,8 @@
                   </p>
                 </div>
                 <div class="extra content">
-                  <span class="right floated">Autor: Monika Engelen</span>
-                  <span>Projektphase: Projektstart, Projektabschluss</span>
+                  <address class="right floated">Autor: Monika Engelen</address>
+                  <p>Projektphase: Projektstart, Projektabschluss</p>
                 </div>
                 <div class="extra content">
                   <span>Tags: Überzeugen, Pitch, Vortrag, Startup</span>
@@ -165,10 +180,9 @@
             <a href="#">
               <article class="ui card">
                 <img
-                  src="./images/team-arbeit.jpg"
+                  src="./assets/images/team-arbeit.jpg"
                   alt="Teamarbeit in einem Startup"
                   class="ui image"
-                  width="512"
                 />
                 <div class="content">
                   <h2 class="">Wie arbeite ich im Team?</h2>
@@ -180,8 +194,8 @@
                   </p>
                 </div>
                 <div class="extra content">
-                  <span class="right floated">Autor: Monika Engelen</span>
-                  <span>Projektphase: Projektstart, Projektabschluss</span>
+                  <address class="right floated">Autor: Monika Engelen</address>
+                  <p>Projektphase: Projektstart, Projektabschluss</p>
                 </div>
                 <div class="extra content">
                   <span>Tags: Überzeugen, Gruppenarbeit, Vortrag, Startup</span>
@@ -193,10 +207,9 @@
             <a href="#">
               <article class="ui card">
                 <img
-                  src="./images/stress-managment.jpg"
+                  src="./assets/images/stress-managment.jpg"
                   alt="Rednerin bei einer Präsentation"
                   class="ui image"
-                  width="512"
                 />
                 <div class="content">
                   <h2 class="">Wie halte ich einen Pitch</h2>
@@ -209,11 +222,10 @@
                   </p>
                 </div>
                 <div class="extra content">
-                  <span class="right floated">Autor: Monika Engelen</span>
-                  <span
-                    >Projektphase: Projektidee, Projektstart,
-                    Projektabschluss</span
-                  >
+                  <address class="right floated">Autor: Monika Engelen</address>
+                  <p>
+                    Projektphase: Projektidee, Projektstart, Projektabschluss
+                  </p>
                 </div>
                 <div class="extra content">
                   <span
@@ -228,10 +240,9 @@
             <a href="#">
               <article class="ui card">
                 <img
-                  src="./images/finanzen-moeglichkeiten.jpg"
+                  src="./assets/images/finanzen-moeglichkeiten.jpg"
                   alt="Strukturierte Darstellung eines Pitches"
                   class="ui image"
-                  width="512"
                 />
                 <div class="content">
                   <h2 class="">Wie Strukturiere ich einen Pitch?</h2>
@@ -244,8 +255,8 @@
                   </p>
                 </div>
                 <div class="extra content">
-                  <span class="right floated">Autor: Monika Engelen</span>
-                  <span>Projektphase: Projektstart, Projektabschluss</span>
+                  <address class="right floated">Autor: Monika Engelen</address>
+                  <p>Projektphase: Projektstart, Projektabschluss</p>
                 </div>
                 <div class="extra content">
                   <span>Tags: Überzeugen, Pitch, Vortrag, Startup</span>
@@ -257,10 +268,9 @@
             <a href="#">
               <article class="ui card">
                 <img
-                  src="./images/lernen-organisieren.jpg"
+                  src="./assets/images/lernen-organisieren.jpg"
                   alt="Teamarbeit in einem Startup"
                   class="ui image"
-                  width="512"
                 />
                 <div class="content">
                   <h2 class="">Wie arbeite ich im Team?</h2>
@@ -272,8 +282,8 @@
                   </p>
                 </div>
                 <div class="extra content">
-                  <span class="right floated">Autor: Monika Engelen</span>
-                  <span>Projektphase: Projektstart, Projektabschluss</span>
+                  <address class="right floated">Autor: Monika Engelen</address>
+                  <p>Projektphase: Projektstart, Projektabschluss</p>
                 </div>
                 <div class="extra content">
                   <span>Tags: Überzeugen, Gruppenarbeit, Vortrag, Startup</span>

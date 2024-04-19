@@ -1,0 +1,22 @@
+.logo > h1 {
+  background-image: linear-gradient(
+    to right,
+    var(--color-th-orange) 0%,
+    var(--color-th-pink) 50%
+  );
+  background-clip: text;
+  color: transparent;
+  display: block;
+  padding-left: var(--m);
+}
+
+.hero {
+  background-color: var(--color-th-orange);
+  color: var(--color-white);
+  padding: var(--m);
+  margin: var(--m) 0;
+}
+
+footer {
+  padding: var(--m);
+}
