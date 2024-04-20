@@ -4,6 +4,7 @@ body {
   font-family: var(--ff-sans);
   font-weight: var(--fw-regular);
   font-size: var(--font-m);
+  animation-duration: 0.3s;
 }
 
 main {
@@ -11,6 +12,7 @@ main {
   display: flex;
   flex-direction: column;
   gap: var(--m);
+  /* position: relative; */
 }
 
 header,
@@ -71,6 +73,10 @@ a {
   color: #333;
   font-size: var(--font-s);
 
+  & > span.icon {
+    /* transition: color 0.3s ease, background-image 0.3s ease; */
+  }
+
   &:hover > span.icon {
     background-image: linear-gradient(
       to right,
@@ -78,7 +84,8 @@ a {
       var(--color-th-pink) 80%
     );
     background-clip: text;
+    -webkit-background-clip: text;
     color: transparent;
-    display: block;
+    transition: color 0.3s ease;
   }
 }
