@@ -8,6 +8,15 @@ body {
 
 main {
   padding: var(--m);
+  display: flex;
+  flex-direction: column;
+  gap: var(--m);
+}
+
+header,
+footer {
+  background-color: var(--color-white);
+  padding: var(--m);
 }
 
 h1,
@@ -16,9 +25,7 @@ h3,
 h4,
 h5,
 h6 {
-  padding-bottom: var(--s);
-  padding-top: var(--s);
-  font-weight: var(--fw-bold);
+  font-weight: var(--fw-semibold);
 }
 
 h1 {
@@ -43,6 +50,10 @@ p {
   font-size: var(--font-s);
 }
 
+address {
+  opacity: 0.5;
+}
+
 ul > li {
   padding: var(--m);
   margin: var(--s) 0;
@@ -59,4 +70,15 @@ a {
   text-decoration: none;
   color: #333;
   font-size: var(--font-s);
+
+  &:hover > span.icon {
+    background-image: linear-gradient(
+      to right,
+      var(--color-th-orange) 0%,
+      var(--color-th-pink) 80%
+    );
+    background-clip: text;
+    color: transparent;
+    display: block;
+  }
 }

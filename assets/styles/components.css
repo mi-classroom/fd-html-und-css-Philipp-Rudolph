@@ -1,4 +1,7 @@
-.logo > h1 {
+/* header */
+
+.logo > h1 > .rainbow {
+  font-size: var(--font-l);
   background-image: linear-gradient(
     to right,
     var(--color-th-orange) 0%,
@@ -6,17 +9,114 @@
   );
   background-clip: text;
   color: transparent;
-  display: block;
-  padding-left: var(--m);
 }
+
+/* submenu */
+
+.submenu {
+  flex-direction: row;
+  justify-content: space-between;
+
+  & > li {
+    padding: var(--xxs) 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+  }
+
+  & .active {
+    background-color: var(--color-bg);
+  }
+}
+
+/* search bar */
+
+.search-bar {
+  justify-content: space-between;
+  padding: var(--m);
+  background-color: var(--color-bg);
+  position: relative;
+
+  & > input {
+    width: 100%;
+    padding: var(--s);
+    font-size: var(--font-s);
+    border: none;
+  }
+
+  & > button {
+    position: absolute;
+    right: var(--m);
+    background-color: transparent;
+    border: none;
+    opacity: 0.5;
+  }
+}
+
+/* hero */
 
 .hero {
   background-color: var(--color-th-orange);
   color: var(--color-white);
-  padding: var(--m);
-  margin: var(--m) 0;
+  padding: var(--xl);
 }
 
+/* ui cards */
+
+@media screen and (min-width: 768px) {
+  .history > ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: var(--m);
+  }
+}
+
+.history > ul > li {
+  padding: 0;
+}
+
+figcaption {
+  padding: var(--s);
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--xxs);
+  overflow-x: scroll;
+  flex-wrap: nowrap;
+  margin-top: var(--xxs);
+
+  & > li {
+    padding: var(--xxs);
+    margin: 0;
+    background-color: var(--color-bg);
+  }
+}
+
+/* footer */
+
 footer {
-  padding: var(--m);
+  background-color: var(--color-bg-footer);
+  color: var(--color-white);
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--max);
+
+  & > section > ul > li {
+    background-color: #333;
+    margin: 0;
+    padding-left: 0;
+
+    & > a {
+      color: var(--color-white);
+
+      & > .icon {
+        margin-right: 0;
+      }
+    }
+  }
 }
