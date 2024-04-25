@@ -67,11 +67,14 @@ header {
 
 .hero {
   background-color: var(--color-th-orange);
-  color: var(--color-white);
   padding: var(--xl);
   display: flex;
   flex-direction: column;
   gap: var(--m);
+
+  & > * {
+    color: var(--color-white);
+  }
 }
 
 /* ui cards */
