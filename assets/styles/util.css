@@ -1,0 +1,50 @@
+/* utility classes */
+
+.wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.height-100 {
+  height: 100%;
+}
+
+.width-100 {
+  width: 100%;
+}
+
+/* media queries */
+
+#large-vp {
+  display: none;
+
+  @media screen and (width >= 768px) {
+    display: flex;
+  }
+}
+
+#small-vp {
+  display: flex;
+
+  @media screen and (width >= 768px) {
+    display: none;
+  }
+}

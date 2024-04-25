@@ -1,36 +1,49 @@
 /* header */
 
 header {
-  box-sizing: border-box;
-  position: -webkit-sticky;
   position: sticky;
+  z-index: 100;
   top: 0;
   width: 100%;
-  z-index: 100;
+  box-sizing: border-box;
 }
 
 .logo > h1 > .rainbow {
-  font-size: var(--font-l);
+  background-clip: text;
   background-image: linear-gradient(
     to right,
     var(--color-th-orange) 0%,
     var(--color-th-pink) 50%
   );
-  background-clip: text;
   color: transparent;
+  font-size: var(--font-l);
+}
+
+/* mainmenu */
+
+.mainmenu {
+  display: flex;
+  justify-content: space-between;
+  padding: var(--m);
+}
+
+.user {
+  border-radius: 50%;
+  background-color: var(--color-bg);
+  color: var(--color-white);
 }
 
 /* submenu */
 
 .submenu {
+  width: 100%;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-evenly;
 
   & > li {
+    height: 100%;
     padding: var(--xxs) 0;
     margin: 0;
-    width: 100%;
-    height: 100%;
     text-align: center;
   }
 
@@ -42,34 +55,42 @@ header {
 /* search bar */
 
 .search-bar {
-  justify-content: space-between;
-  padding: var(--m);
-  background-color: var(--color-bg);
   position: relative;
+  justify-content: space-between;
 
   & > input {
     width: 100%;
     padding: var(--s);
-    font-size: var(--font-s);
     border: none;
+    background-color: var(--color-bg);
+    font-size: var(--font-s);
   }
 
   & > button {
     position: absolute;
-    right: var(--m);
-    background-color: transparent;
+    right: 0;
+    height: 100%;
     border: none;
-    opacity: 0.5;
+    background-color: var(--color-th-orange);
+    color: var(--color-white);
+
+    & > .icon {
+      margin: var(--xxs);
+    }
   }
+}
+
+.search-bar-large-vp {
+  width: 50%;
 }
 
 /* hero */
 
 .hero {
-  background-color: var(--color-th-orange);
-  padding: var(--xl);
   display: flex;
   flex-direction: column;
+  padding: var(--xl);
+  background-color: var(--color-th-orange);
   gap: var(--m);
 
   & > * {
@@ -79,34 +100,43 @@ header {
 
 /* ui cards */
 
-@media screen and (min-width: 768px) {
+.ui-card {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+}
+
+@media screen and (width >= 768px) {
   .history > ul {
     display: grid;
+    gap: var(--m);
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto auto;
-    gap: var(--m);
   }
 }
 
 .history > ul > li {
-  padding: 0;
-  max-width: 512px;
   overflow: hidden;
+  max-width: 512px;
+  padding: 0;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (width <= 768px) {
     max-width: 100%;
   }
 }
 
 figcaption {
   padding: var(--s);
+
+  & > address {
+    flex-grow: 1;
+  }
 }
 
 .tags {
   display: flex;
-  flex-wrap: nowrap;
-  gap: var(--xxs);
   margin-top: var(--xxs);
+  gap: var(--xxs);
   overflow-x: auto;
 
   &::-webkit-scrollbar {
@@ -117,26 +147,35 @@ figcaption {
     padding: var(--xxs);
     margin: 0;
     background-color: var(--color-bg);
+
+    &:hover {
+      background-color: var(--color-bg-footer);
+      color: var(--color-white);
+    }
   }
 }
 
 /* footer */
 
 footer {
-  background-color: var(--color-bg-footer);
-  color: var(--color-white);
   display: flex;
   flex-direction: column;
+  background-color: var(--color-bg-footer);
+  color: var(--color-white);
 
-  @media screen and (min-width: 768px) {
+  & > section {
+    max-width: 80vw;
+  }
+
+  @media screen and (width >= 768px) {
     flex-direction: row;
     gap: var(--max);
   }
 
   & > section > ul > li {
-    background-color: #333;
-    margin: 0;
     padding-left: 0;
+    margin: 0;
+    background-color: #333;
 
     & > a {
       color: var(--color-white);

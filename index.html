@@ -4,28 +4,54 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ProjectSurvival4All TH - Köln</title>
-    <link rel="stylesheet" href="./assets/styles/reset.css" />
-    <link rel="stylesheet" href="./assets/styles/fonts.css" />
-    <link rel="stylesheet" href="./assets/styles/icons.css" />
-    <link rel="stylesheet" href="./assets/styles/variables.css" />
-    <link rel="stylesheet" href="./assets/styles/base.css" />
-    <link rel="stylesheet" href="./assets/styles/styles.css" />
-    <link rel="stylesheet" href="./assets/styles/components.css" />
+    <link rel="stylesheet" href="./assets/styles/main.css" />
   </head>
 
   <body>
     <!-- header -->
     <header>
       <nav class="wrapper mainmenu">
-        <a href="#">
-          <span class="icon icon--xl">menu</span>
-        </a>
         <a class="logo" href="./index.html">
           <h1>
             <span class="rainbow">ProjectSurvival4All</span> <br />
             TH Köln
           </h1>
         </a>
+        <!-- searchbar -->
+        <form class="wrapper search-bar search-bar-large-vp" id="large-vp">
+          <input type="search" placeholder="Suche" />
+          <button class="wrapper" type="submit">
+            <span class="search icon icon--l height-100 flex align-center"
+              >search</span
+            >
+          </button>
+        </form>
+        <a href="#">
+          <span class="icon icon--xl" id="small-vp">menu</span>
+        </a>
+        <ul id="large-vp">
+          <li>
+            <a href="#">News</a>
+          </li>
+          <li>
+            <a href="#">Barrierefreiheit</a>
+          </li>
+          <li>
+            <a href="#">De</a>
+            <span class="icon icon--m"> expand_more </span>
+          </li>
+          <li class="user">
+            <a href="#"> MK </a>
+            <!-- <ul>
+              <li>
+                <a href="#">Mein Bereich</a>
+              </li>
+              <li>
+                <a href="#">Logout</a>
+              </li>
+            </ul> -->
+          </li>
+        </ul>
       </nav>
       <nav>
         <ul class="wrapper submenu">
@@ -40,17 +66,17 @@
           </li>
         </ul>
       </nav>
-      <!-- search bar -->
-      <form class="wrapper search-bar">
-        <input type="search icon" placeholder="Suche" />
-        <button type="submit">
-          <span class="icon icon--l">search</span>
-        </button>
-      </form>
     </header>
 
     <!-- main -->
     <main>
+      <!-- search bar -->
+      <form class="wrapper search-bar" id="small-vp">
+        <input type="search" placeholder="Suche" />
+        <button class="wrapper" type="submit">
+          <span class="search icon icon--l">search</span>
+        </button>
+      </form>
       <!-- Welcome Banner -->
       <section class="hero">
         <h2>Willkommen</h2>
@@ -76,8 +102,8 @@
       <!-- Favoriten -->
       <section class="favourites">
         <h2>Favoriten</h2>
-        <ul>
-          <li class="has-icon">
+        <ul class="grid-list">
+          <li class="wrapper">
             <a href="#" class="wrapper">
               <span class="icon icon--xl"> description </span>
               <div class="container">
@@ -86,7 +112,7 @@
               </div>
             </a>
           </li>
-          <li>
+          <li class="wrapper">
             <a href="#" class="wrapper">
               <span class="icon icon--xl"> description </span>
               <div class="container">
@@ -95,7 +121,7 @@
               </div>
             </a>
           </li>
-          <li>
+          <li class="wrapper">
             <a href="#" class="wrapper">
               <span class="icon icon--xl"> smart_display </span>
               <div class="container">
@@ -104,7 +130,7 @@
               </div>
             </a>
           </li>
-          <li>
+          <li class="wrapper">
             <a href="#" class="wrapper">
               <span class="icon icon--xl"> description </span>
               <div class="container">
@@ -113,7 +139,7 @@
               </div>
             </a>
           </li>
-          <li>
+          <li class="wrapper">
             <a href="#" class="wrapper">
               <span class="icon icon--xl"> smart_display </span>
               <div class="container">
@@ -128,7 +154,7 @@
       <!-- ILU Schreibtisch -->
       <section>
         <h2>Von deinem ILU Schreibtisch</h2>
-        <ul>
+        <ul class="item-list">
           <li>
             <a href="#" class="wrapper">
               <span class="icon icon--xl">folder</span>
@@ -180,7 +206,7 @@
         <ul>
           <li>
             <a href="#">
-              <article class="ui-card">
+              <article class="flex-column height-100">
                 <figure>
                   <img
                     src="./assets/images/rednerin-praesentation.jpg"
@@ -188,19 +214,9 @@
                     class="ui image"
                   />
                 </figure>
-                <figcaption>
+                <figcaption class="flex-column height-100">
                   <h2 class="">Wie halte ich einen Pitch?</h2>
-                  <!-- <time class="date">2024-02-02</time> -->
                   <address class="right floated">Monika Engelen</address>
-                  <!-- <p>
-                    Tipps und Best Practices zur Vorbereitung und Durchführung
-                    eines überzeugenden Pitches, einschließlich der
-                    Strukturierung des Inhalts, Präsentationstechniken und der
-                    Beantwortung von Fragen.
-                  </p> -->
-                  <p>
-                    <!-- Projektphase: Projektidee, Projektstart, Projektabschluss -->
-                  </p>
                   <span>
                     <ul class="tags">
                       <li>Pitch</li>
@@ -216,7 +232,7 @@
           </li>
           <li>
             <a href="#">
-              <article class="ui-card">
+              <article class="flex-column height-100">
                 <figure>
                   <img
                     src="./assets/images/business-idea.jpg"
@@ -224,17 +240,9 @@
                     class="ui image"
                   />
                 </figure>
-                <figcaption>
+                <figcaption class="flex-column height-100">
                   <h2 class="">Wie Strukturiere ich einen Pitch?</h2>
-                  <!-- <time class="date">2024-02-02</time> -->
                   <address class="right floated">Monika Engelen</address>
-                  <!-- <p>
-                    Schritte und Richtlinien zur strukturierten Gestaltung eines
-                    Pitches, einschließlich der Festlegung von Zielen, Auswahl
-                    relevanter Inhalte, Aufbau einer überzeugenden Geschichte
-                    und Präsentationstechniken.
-                  </p> -->
-                  <!-- <p>Projektphase: Projektstart, Projektabschluss</p> -->
                   <span>
                     <ul class="tags">
                       <li>Überzeugen</li>
@@ -249,7 +257,7 @@
           </li>
           <li>
             <a href="#">
-              <article class="ui-card">
+              <article class="flex-column height-100">
                 <figure>
                   <img
                     src="./assets/images/lernen-organisieren.jpg"
@@ -257,16 +265,9 @@
                     class="ui image"
                   />
                 </figure>
-                <figcaption>
+                <figcaption class="flex-column height-100">
                   <h2 class="">Wie arbeite ich im Team?</h2>
                   <address class="right floated">Monika Engelen</address>
-                  <!-- <time class="date">2024-02-02</time> -->
-                  <!-- <p>
-                    Tipps und Best Practices für eine effektive Zusammenarbeit
-                    in einem Team, einschließlich klarer Rollenverteilung,
-                    offener Kommunikation und konstruktivem Feedback.
-                  </p> -->
-                  <!-- <p>Projektphase: Projektstart, Projektabschluss</p> -->
                   <span>
                     <ul class="tags">
                       <li>Überzeugen</li>
@@ -281,7 +282,7 @@
           </li>
           <li>
             <a href="#">
-              <article class="ui-card">
+              <article class="flex-column height-100">
                 <figure>
                   <img
                     src="./assets/images/rednerin-praesentation.jpg"
@@ -289,19 +290,9 @@
                     class="ui image"
                   />
                 </figure>
-                <figcaption>
+                <figcaption class="flex-column height-100">
                   <h2 class="">Wie halte ich einen Pitch</h2>
-                  <!-- <time class="date">2024-02-02</time> -->
                   <address class="right floated">Monika Engelen</address>
-                  <!-- <p>
-                    Tipps und Best Practices zur Vorbereitung und Durchführung
-                    eines überzeugenden Pitches, einschließlich der
-                    Strukturierung des Inhalts, Präsentationstechniken und der
-                    Beantwortung von Fragen.
-                  </p> -->
-                  <p>
-                    <!-- Projektphase: Projektidee, Projektstart, Projektabschluss -->
-                  </p>
                   <span>
                     <ul class="tags">
                       <li>Pitch</li>
@@ -317,7 +308,7 @@
           </li>
           <li>
             <a href="#">
-              <article class="ui-card">
+              <article class="flex-column height-100">
                 <figure>
                   <img
                     src="./assets/images/finanzen-moeglichkeiten.jpg"
@@ -325,17 +316,9 @@
                     class="ui image"
                   />
                 </figure>
-                <figcaption>
+                <figcaption class="flex-column height-100">
                   <h2 class="">Wie Strukturiere ich einen Pitch?</h2>
-                  <!-- <time class="date">2024-02-02</time> -->
                   <address class="right floated">Monika Engelen</address>
-                  <!-- <p>
-                    Schritte und Richtlinien zur strukturierten Gestaltung eines
-                    Pitches, einschließlich der Festlegung von Zielen, Auswahl
-                    relevanter Inhalte, Aufbau einer überzeugenden Geschichte
-                    und Präsentationstechniken.
-                  </p> -->
-                  <!-- <p>Projektphase: Projektstart, Projektabschluss</p> -->
                   <span>
                     <ul class="tags">
                       <li>Überzeugen</li>
@@ -350,7 +333,7 @@
           </li>
           <li>
             <a href="#">
-              <article class="ui-card">
+              <article class="flex-column height-100">
                 <figure>
                   <img
                     src="./assets/images/lernen-organisieren.jpg"
@@ -358,16 +341,9 @@
                     class="ui image"
                   />
                 </figure>
-                <figcaption>
+                <figcaption class="flex-column height-100">
                   <h2 class="">Wie arbeite ich im Team?</h2>
                   <address class="right floated">Monika Engelen</address>
-                  <!-- <time class="date">2024-02-02</time> -->
-                  <!-- <p>
-                    Tipps und Best Practices für eine effektive Zusammenarbeit
-                    in einem Team, einschließlich klarer Rollenverteilung,
-                    offener Kommunikation und konstruktivem Feedback.
-                  </p> -->
-                  <!-- <p>Projektphase: Projektstart, Projektabschluss</p> -->
                   <span>
                     <ul class="tags">
                       <li>Überzeugen</li>

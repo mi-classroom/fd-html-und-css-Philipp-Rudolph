@@ -1,24 +1,24 @@
 html,
 body {
+  animation-duration: 0.3s;
   background-color: var(--color-bg);
   font-family: var(--ff-sans);
-  font-weight: var(--fw-regular);
   font-size: var(--font-m);
-  animation-duration: 0.3s;
+  font-weight: var(--fw-regular);
 }
 
 main {
-  padding: var(--m);
   display: flex;
+  max-width: 1024px;
   flex-direction: column;
+  padding: 0 var(--m);
+  margin: 0 auto;
   gap: var(--m);
-  /* position: relative; */
 }
 
 header,
 footer {
   background-color: var(--color-white);
-  padding: var(--m);
 }
 
 h1,
@@ -48,8 +48,8 @@ h4 {
 }
 
 p {
-  line-height: var(--l);
   font-size: var(--font-s);
+  line-height: var(--l);
 }
 
 address {
@@ -57,34 +57,30 @@ address {
 }
 
 ul > li {
-  padding: var(--m);
+  align-items: center;
+  padding: var(--xs) var(--m);
   margin: var(--s) 0;
   background-color: var(--color-white);
 }
 
 img {
-  aspect-ratio: 16/9;
   width: 100%;
+  aspect-ratio: 16/9;
   object-fit: cover;
 }
 
 a {
-  text-decoration: none;
   color: #333;
   font-size: var(--font-s);
-
-  & > span.icon {
-    /* transition: color 0.3s ease, background-image 0.3s ease; */
-  }
+  text-decoration: none;
 
   &:hover > span.icon {
+    background-clip: text;
     background-image: linear-gradient(
       to right,
       var(--color-th-orange) 0%,
       var(--color-th-pink) 80%
     );
-    background-clip: text;
-    -webkit-background-clip: text;
     color: transparent;
     transition: color 0.3s ease;
   }

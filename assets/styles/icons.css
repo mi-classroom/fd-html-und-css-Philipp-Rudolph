@@ -2,6 +2,7 @@
   display: inline-block;
   width: auto;
   height: auto;
+  margin-right: var(--s);
   direction: ltr;
   font-family: var(--ff-icons);
   font-feature-settings: "liga";
@@ -16,7 +17,6 @@
   vertical-align: bottom;
   white-space: nowrap;
   word-wrap: normal;
-  margin-right: var(--xs);
 }
 
 .has-icon::before {
@@ -62,6 +62,7 @@
 .icon.md-dark {
   color: var(--lightest);
 }
+
 .icon.md-light {
   color: var(--darkest);
 }
