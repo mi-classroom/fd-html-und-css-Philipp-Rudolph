@@ -17,6 +17,7 @@ header {
   );
   color: transparent;
   font-size: var(--font-l);
+  margin-right: var(--s);
 }
 
 /* mainmenu */
@@ -27,10 +28,11 @@ header {
   padding: var(--m);
 }
 
-.user {
-  border-radius: 50%;
-  background-color: var(--color-bg);
+.user-circle {
   color: var(--color-white);
+  background-color: var(--color-bg);
+  border-radius: 50%;
+  padding: var(--s);
 }
 
 /* submenu */
@@ -49,6 +51,31 @@ header {
 
   & .active {
     background-color: var(--color-bg);
+  }
+}
+
+/* submenu - mobile (aside) */
+aside {
+  display: flex;
+  gap: var(--l);
+  flex-direction: column;
+  position: fixed;
+  padding: var(--xl);
+  background-color: var(--color-bg);
+  height: calc(100vh - var(--xl) * 2);
+  width: 200px;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  transform: translateX(-100%);
+  transition: transform var(--tr-normal);
+  backdrop-filter: none;
+
+  &.is-active {
+    transform: translateX(0);
+  }
+  & > nav > ul > li {
+    background-color: transparent;
   }
 }
 
@@ -81,7 +108,8 @@ header {
 }
 
 .search-bar-large-vp {
-  width: 50%;
+  min-width: 30%;
+  max-width: 50%;
 }
 
 /* hero */
@@ -90,6 +118,7 @@ header {
   display: flex;
   flex-direction: column;
   padding: var(--xl);
+  margin-top: var(--m);
   background-color: var(--color-th-orange);
   gap: var(--m);
 
@@ -109,7 +138,7 @@ header {
 @media screen and (width >= 768px) {
   .history > ul {
     display: grid;
-    gap: var(--m);
+    gap: 0 var(--m);
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto auto;
   }

@@ -31,9 +31,18 @@
   width: 100%;
 }
 
+.width-90 {
+  width: 90vw;
+  margin: 0 auto;
+}
+
+.padding-m {
+  padding: var(--m);
+}
+
 /* media queries */
 
-#large-vp {
+.large-vp {
   display: none;
 
   @media screen and (width >= 768px) {
@@ -41,10 +50,18 @@
   }
 }
 
-#small-vp {
+.small-vp {
   display: flex;
 
   @media screen and (width >= 768px) {
     display: none;
   }
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+.blur:not(aside) {
+  filter: blur(4px);
 }

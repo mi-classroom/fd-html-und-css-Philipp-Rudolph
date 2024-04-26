@@ -36,4 +36,7 @@
   --font-m: var(--m);
   --font-l: var(--l);
   --font-xl: var(--xl);
+
+  /* transitions */
+  --tr-normal: 0.3s ease-in-out;
 }

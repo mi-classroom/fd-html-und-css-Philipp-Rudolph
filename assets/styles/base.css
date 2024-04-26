@@ -9,11 +9,9 @@ body {
 
 main {
   display: flex;
-  max-width: 1024px;
   flex-direction: column;
-  padding: 0 var(--m);
-  margin: 0 auto;
   gap: var(--m);
+  padding: var(--m);
 }
 
 header,
@@ -59,7 +57,7 @@ address {
 ul > li {
   align-items: center;
   padding: var(--xs) var(--m);
-  margin: var(--s) 0;
+  margin: var(--xs) 0;
   background-color: var(--color-white);
 }
 
