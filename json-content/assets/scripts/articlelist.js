@@ -30,21 +30,18 @@ function initArticleList() {
 }
 
 function initFilters() {
-  const filterSection = document.querySelector('[data-js-category="keywords"]');
+  const keywordsSection = document.querySelector(
+    '[data-js-category="keywords"]'
+  );
 
-  const keywords = currentData.articles
-    .map((article) => article.tags.keywords)
-    .flat();
-
-  const uniqueKeywords = keywords.filter((item, index) => {
-    return keywords.indexOf(item) === index;
-  });
-
-  filterSection.innerHTML = uniqueKeywords
-    .map((keyword) => {
-      return `<button data-js-filter="${keyword}" class="button button-primary">${keyword}</button>`;
-    })
-    .join("");
+  // keyword tags
+  createTagButtons("keywords");
+  // file format tags
+  createTagButtons("fileFormat");
+  // modules tags
+  createTagButtons("modules");
+  // project phase tags
+  createTagButtons("projectphase");
 
   const filterButtons = document.querySelectorAll("[data-js-filter]");
 
@@ -56,6 +53,24 @@ function initFilters() {
   });
 
   resetFilters();
+}
+
+function createTagButtons(category) {
+  const section = document.querySelector(`[data-js-category="${category}"]`);
+
+  const tags = currentData.articles
+    .map((article) => article.tags[category])
+    .flat();
+
+  const uniqueTags = tags.filter((item, index) => {
+    return tags.indexOf(item) === index;
+  });
+
+  section.innerHTML = uniqueTags
+    .map((tag) => {
+      return `<button data-js-filter="${tag}" class="button button-primary">${tag}</button>`;
+    })
+    .join("");
 }
 
 // reset the filters
@@ -132,6 +147,8 @@ function renderArticleListe(articles) {
       li.textContent = tag;
       return li;
     });
+
+    console.log(fileFormatTags, keywordsTags, modulesTags, projectphaseTags);
 
     // append the elements
     ul.append(
