@@ -127,28 +127,34 @@ function renderArticleListe(articles) {
       const li = document.createElement("li");
       li.classList.add("tag");
       li.textContent = tag;
+      // add data attribute to li
+      li.setAttribute("data-js-filter", tag);
       return li;
     });
     const keywordsTags = article.tags.keywords.map((tag) => {
       const li = document.createElement("li");
       li.classList.add("tag");
       li.textContent = tag;
+      // add data attribute to li
+      li.setAttribute("data-js-filter", tag);
       return li;
     });
     const modulesTags = article.tags.modules.map((tag) => {
       const li = document.createElement("li");
       li.classList.add("tag");
       li.textContent = tag;
+      // add data attribute to li
+      li.setAttribute("data-js-filter", tag);
       return li;
     });
     const projectphaseTags = article.tags.projectphase.map((tag) => {
       const li = document.createElement("li");
       li.classList.add("tag");
       li.textContent = tag;
+      // add data attribute to li
+      li.setAttribute("data-js-filter", tag);
       return li;
     });
-
-    console.log(fileFormatTags, keywordsTags, modulesTags, projectphaseTags);
 
     // append the elements
     ul.append(

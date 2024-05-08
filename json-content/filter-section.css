@@ -153,5 +153,10 @@
       background-color: var(--color-darkest);
       color: var(--color-white);
     }
+
+    & .active {
+      background-color: var(--color-th-orange);
+      color: var(--color-white);
+    }
   }
 }

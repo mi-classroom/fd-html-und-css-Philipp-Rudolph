@@ -17,8 +17,7 @@ function monitorDOMChanges() {
   const observer = new MutationObserver((mutationsList) => {
     mutationsList.forEach((mutation) => {
       mutation.addedNodes.forEach((addedNode) => {
-        if (addedNode.classList && addedNode.classList.contains("button")) {
-          console.log("Button added");
+        if (addedNode.classList.contains("button")) {
           stylesInitialized = false;
           if (!stylesInitialized) {
             initStyles();
@@ -36,6 +35,7 @@ monitorDOMChanges();
 function initStyles() {
   const buttons = document.querySelectorAll(".button");
   const resetButton = document.querySelector("[data-js-reset-filter]");
+  const tags = document.querySelectorAll(".tag");
 
   buttons.forEach((button) => {
     button.addEventListener("click", function () {
@@ -48,6 +48,24 @@ function initStyles() {
     });
   });
 
-  console.log("Styles initialized");
+  /*
+    Frage für Vorlesung: warum wird bei tags keine Klasse hinzugefügt?
+  */
+
+  tags.forEach((tag) => {
+    tag.addEventListener("click", function () {
+      buttons.forEach((button) => {
+        if (
+          button.getAttribute("data-js-filter") ===
+          tag.getAttribute("data-js-filter")
+        ) {
+          console.log(tag);
+          button.classList.add("active");
+        }
+      });
+      tag.classList.add("active");
+    });
+  });
+
   stylesInitialized = true;
 }
