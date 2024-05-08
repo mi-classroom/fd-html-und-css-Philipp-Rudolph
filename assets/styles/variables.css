@@ -1,0 +1,42 @@
+:root {
+  /* colors */
+  --color-text: #000;
+  --color-bg: #e8e8e8;
+  --color-white: #fff;
+  --color-th-pink: #b62584;
+  --color-th-orange: #ea5b0c;
+  --color-th-rot: #c60c0f;
+  --color-links: #4285f4;
+  --color-bg-footer: #333;
+
+  /* sizes */
+  --xxs: 10px;
+  --xs: 12px;
+  --s: 16px;
+  --m: 20px;
+  --l: 25px;
+  --xl: 31.5px;
+  --xxl: 40px;
+  --xxxl: 50px;
+  --xxxxl: 63px;
+  --max: 100px;
+
+  /* font-families */
+  --ff-sans: "Source Sans 3", helvetica, arial, sans-serif;
+  --ff-icons: "Material Icons";
+
+  /* font weights */
+  --fw-regular: 400;
+  --fw-semibold: 500;
+  --fw-bold: 700;
+
+  /* font-sizes */
+  --font-xs: var(--xs);
+  --font-s: var(--s);
+  --font-m: var(--m);
+  --font-l: var(--l);
+  --font-xl: var(--xl);
+
+  /* transitions */
+  --tr-normal: 0.3s ease-in-out;
+}

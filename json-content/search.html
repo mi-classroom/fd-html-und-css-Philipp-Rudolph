@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      ProjectSurvival4All – Survival-Tipps für die Projektarbeit - Suche
+    </title>
+    <link rel="stylesheet" href="./reset.css" />
+    <link rel="stylesheet" href="./variables.css" />
+    <link rel="stylesheet" href="./base.css" />
+    <link rel="stylesheet" href="./filter-section.css" />
+    <script src="./assets/scripts/articlelist.js"></script>
+    <script src="./assets/scripts/style.js" defer></script>
+  </head>
+
+  <body>
+    <main>
+      <section class="filter-section p-m">
+        <h2>Filter</h2>
+        <h3>Projektphasen</h3>
+        <ul class="horizontal-flow" data-js-category="projectphase">
+          <li>
+            <button class="button button-primary" data-js-filter="Projektidee">
+              Projektidee
+            </button>
+          </li>
+          <li>
+            <button class="button button-primary" data-js-filter="Projektstart">
+              Projektstart
+            </button>
+          </li>
+          <li>
+            <button
+              class="button button-primary"
+              data-js-filter="Projektdurchführung"
+            >
+              Projektdurchführung
+            </button>
+          </li>
+          <li>
+            <button
+              class="button button-primary"
+              data-js-filter="Projektabschluss"
+            >
+              Projektabschluss
+            </button>
+          </li>
+        </ul>
+        <h3>Schlagwörter</h3>
+        <ul class="horizontal-flow" data-js-category="keywords"></ul>
+        <h3>Deine Module</h3>
+        <ul class="horizontal-flow" data-js-category="modules">
+          <li>
+            <button
+              class="button button-primary"
+              data-js-filter="Projektmanagement"
+            >
+              Projektmanagement
+            </button>
+          </li>
+          <li>
+            <button
+              class="button button-primary"
+              data-js-filter="Sressmanagement"
+            >
+              Sressmanagement
+            </button>
+          </li>
+          <li>
+            <button
+              class="button button-primary"
+              data-js-filter="Betriebswirtschaftslehre"
+            >
+              Betriebswirtschaftslehre
+            </button>
+          </li>
+          <li>
+            <button class="button button-primary" data-js-filter="Screendesign">
+              Screendesign
+            </button>
+          </li>
+          <li>
+            <button
+              class="button button-primary"
+              data-js-filter="Entwicklungsprojekt"
+            >
+              Entwicklungsprojekt
+            </button>
+          </li>
+        </ul>
+        <h3>Dateiformat</h3>
+        <ul class="horizontal-flow" data-js-category="fileFormat"></ul>
+        <div class="filter-section-actionbar">
+          <button class="button button-primary" data-js-reset-filter>
+            Filter löschen
+          </button>
+          <button class="button button-secondary">Filter Anwenden</button>
+        </div>
+      </section>
+      <section class="p-m">
+        <ul class="card-grid" data-js-generate-articlelist></ul>
+      </section>
+    </main>
+  </body>
+</html>

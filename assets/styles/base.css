@@ -1,0 +1,85 @@
+html,
+body {
+  animation-duration: 0.3s;
+  background-color: var(--color-bg);
+  font-family: var(--ff-sans);
+  font-size: var(--font-m);
+  font-weight: var(--fw-regular);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: var(--m);
+  padding: var(--m);
+}
+
+header,
+footer {
+  background-color: var(--color-white);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: var(--fw-semibold);
+}
+
+h1 {
+  display: inline-block;
+  font-size: var(--font-xl);
+}
+
+h2 {
+  font-size: var(--font-l);
+}
+
+h3 {
+  font-size: var(--font-m);
+}
+
+h4 {
+  font-size: var(--font-s);
+}
+
+p {
+  font-size: var(--font-s);
+  line-height: var(--l);
+}
+
+address {
+  opacity: 0.5;
+}
+
+ul > li {
+  align-items: center;
+  padding: var(--xs) var(--m);
+  margin: var(--xs) 0;
+  background-color: var(--color-white);
+}
+
+img {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+}
+
+a {
+  color: #333;
+  font-size: var(--font-s);
+  text-decoration: none;
+
+  &:hover > span.icon {
+    background-clip: text;
+    background-image: linear-gradient(
+      to right,
+      var(--color-th-orange) 0%,
+      var(--color-th-pink) 80%
+    );
+    color: transparent;
+    transition: color 0.3s ease;
+  }
+}

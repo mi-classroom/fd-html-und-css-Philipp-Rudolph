@@ -1,0 +1,36 @@
+/* layouts */
+
+.grid-list {
+  display: grid;
+  gap: 0 var(--m);
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  @media screen and (width <= 768px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.item-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 var(--m);
+
+  @media screen and (width <= 768px) {
+    display: block;
+    flex-direction: column;
+  }
+}
+
+.tab-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+
+  > * {
+    grid-row-start: 1;
+    grid-column-start: 1;
+    display: none;
+
+    &.is-active {
+      display: block;
+    }
+  }
+}
