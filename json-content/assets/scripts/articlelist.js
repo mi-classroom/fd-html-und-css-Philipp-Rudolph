@@ -104,8 +104,8 @@ function renderArticleListe(articles) {
 
   const cards = articles.map((article) => {
     // create the card elements
-    const liItem = document.createElement("li");
-    liItem.classList.add("card");
+    const cardElement = document.createElement("li");
+    cardElement.classList.add("card");
 
     // create the figure & image element
     const figure = document.createElement("figure");
@@ -165,9 +165,9 @@ function renderArticleListe(articles) {
     );
     figCaption.append(h3, address, ul);
     figure.append(img, figCaption);
-    liItem.append(figure);
+    cardElement.append(figure);
 
-    return liItem;
+    return cardElement;
   });
 
   // clear the article list and append the new cards
